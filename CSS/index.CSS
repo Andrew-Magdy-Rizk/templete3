@@ -686,6 +686,11 @@ ul {
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 45px;
 }
+@media (max-width: 767px) {
+  .testimonials .container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
 .testimonials .box {
   position: relative;
   background-color: white;
@@ -816,6 +821,11 @@ ul {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 45px;
+}
+@media (max-width: 767px) {
+  .services .container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
 }
 .services .box {
   background-color: white;
