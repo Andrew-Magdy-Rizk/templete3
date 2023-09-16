@@ -47,7 +47,16 @@ ul {
     width: 1170px;
   }
 }
-
+.scroller {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: var(--mian-color-Alt);
+  height: 5px;
+  width: 0;
+  z-index: 8888;
+  border-radius: 2px;
+}
 .main-title {
   font-size: 30px;
   margin: 0px auto 80px;
@@ -72,15 +81,15 @@ ul {
   z-index: -1;
 }
 .main-title:hover {
-  transition-delay: 0.6s;
+  transition-delay: 0.4s;
   color: white;
   border: 2px solid white;
 }
 .main-title:hover::before {
-  animation: left-move 0.6s linear forwards;
+  animation: left-move 0.4s linear forwards;
 }
 .main-title:hover::after {
-  animation: Right-move 0.6s linear forwards;
+  animation: Right-move 0.4s linear forwards;
 }
 .main-title::after {
   content: "";
