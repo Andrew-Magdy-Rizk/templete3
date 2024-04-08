@@ -12,6 +12,10 @@ let counters = document.querySelectorAll(".stats .box .number");
 let saction = document.querySelector(".stats");
 let started = false;
 
+// Counter progress
+let countSkill = document.querySelectorAll(".our-skills .the-progress span");
+let progresssec = document.querySelector(".our-skills");
+
 window.onscroll = function () {
   if (window.scrollY >= saction.offsetTop - 300) {
     if (!started) {
@@ -20,10 +24,9 @@ window.onscroll = function () {
     started = true;
   }
   if (window.scrollY >= progresssec.offsetTop - 100) {
-    if (!startedprog) {
-      countSkill.forEach((counter) => startCountprog(counter));
-    }
-    startedprog = true;
+    countSkill.forEach((counter) => {
+      counter.style.width = counter.dataset.goal;
+    });
   }
 };
 
@@ -37,19 +40,14 @@ function startCount(el) {
   }, 2000 / goal);
 }
 
-// Counter progress
-let countSkill = document.querySelectorAll(".our-skills .the-progress span");
-let progresssec = document.querySelector(".our-skills");
-let startedprog = false;
-
-function startCountprog(el) {
-  let number = 0;
-  let goal = el.dataset.goal;
-  let count = setInterval(() => {
-    el.style.width = number + "%";
-    number++;
-    if (number == goal) {
-      clearInterval(count);
-    }
-  }, 1000 / goal);
-}
+// function startCountprog(el) {
+//   let number = 0;
+//   let goal = el.dataset.goal;
+//   let count = setInterval(() => {
+//     el.style.width = number + "%";
+//     number++;
+//     if (number == goal) {
+//       clearInterval(count);
+//     }
+//   }, 1000 / goal);
+// }
