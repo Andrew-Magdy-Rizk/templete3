@@ -40,14 +40,29 @@ function startCount(el) {
   }, 2000 / goal);
 }
 
-// function startCountprog(el) {
-//   let number = 0;
-//   let goal = el.dataset.goal;
-//   let count = setInterval(() => {
-//     el.style.width = number + "%";
-//     number++;
-//     if (number == goal) {
-//       clearInterval(count);
-//     }
-//   }, 1000 / goal);
-// }
+// set counter for timer
+let countDownDate = new Date("Sep 2, 2024 23:59:59").getTime();
+
+let count = setInterval(function () {
+  let now = new Date().getTime();
+
+  let datediff = countDownDate - now;
+
+  let days = Math.floor(datediff / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((datediff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((datediff % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((datediff % (1000 * 60)) / 1000);
+
+  document.querySelector(".time .days").innerHTML =
+    days < 10 ? `0${days}` : days;
+  document.querySelector(".time .hours").innerHTML =
+    hours < 10 ? `0${hours}` : hours;
+  document.querySelector(".time .minutes").innerHTML =
+    minutes < 10 ? `0${minutes}` : minutes;
+  document.querySelector(".time .seconds").innerHTML =
+    seconds < 10 ? `0${seconds}` : seconds;
+
+  if (datediff < 0) {
+    clearInterval(count);
+  }
+}, 1000);
