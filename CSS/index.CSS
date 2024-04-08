@@ -411,6 +411,25 @@ ul {
 /* Start Articles */
 .article {
   padding: 80px 0px;
+  opacity: 0;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transform: translateY(500px);
+  -webkit-transform: translateY(500px);
+  -moz-transform: translateY(500px);
+  -ms-transform: translateY(500px);
+  -o-transform: translateY(500px);
+}
+.article.active {
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
 }
 .article .container {
   display: grid;
@@ -482,6 +501,17 @@ ul {
 .gallery {
   background-color: var(--mian-color-section);
   padding: 80px 0;
+  opacity: 0;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transform: translateY(500px);
+}
+.gallery.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 .gallery .container {
   display: grid;
@@ -535,6 +565,17 @@ ul {
 /* Start features */
 .features {
   padding: 80px 0;
+  opacity: 0;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transform: translateY(500px);
+}
+.features.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 .features .container {
   display: grid;
@@ -689,7 +730,20 @@ ul {
 .testimonials {
   background-color: var(--mian-color-section);
   padding: 80px 0;
+  opacity: 0;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transform: translateY(500px);
 }
+
+.testimonials.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .testimonials .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -742,6 +796,26 @@ ul {
 /* Start TeamMembers */
 .teammembers {
   padding: 80px 0;
+  opacity: 0;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transform: translateY(500px);
+  -webkit-transform: translateY(500px);
+  -moz-transform: translateY(500px);
+  -ms-transform: translateY(500px);
+  -o-transform: translateY(500px);
+}
+
+.teammembers.active {
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
 }
 .teammembers .container {
   display: grid;

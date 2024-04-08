@@ -16,6 +16,13 @@ let started = false;
 let countSkill = document.querySelectorAll(".our-skills .the-progress span");
 let progresssec = document.querySelector(".our-skills");
 
+// make function for scroll to top
+let secArticle = document.querySelector(".article");
+let secGallery = document.querySelector(".gallery");
+let secFeatures = document.querySelector(".features");
+let secTestimonials = document.querySelector(".testimonials");
+let secTeammembers = document.querySelector(".teammembers");
+
 window.onscroll = function () {
   if (window.scrollY >= saction.offsetTop - 300) {
     if (!started) {
@@ -27,6 +34,23 @@ window.onscroll = function () {
     countSkill.forEach((counter) => {
       counter.style.width = counter.dataset.goal;
     });
+  }
+  if (window.scrollY >= secArticle.offsetTop / 2) {
+    secArticle.classList.add("active");
+  }
+  if (window.scrollY >= secGallery.offsetTop - 500) {
+    secGallery.classList.add("active");
+  }
+  // console.log(secFeatures.offsetTop - 500);
+  // console.log(window.scrollY);
+  if (window.scrollY >= secFeatures.offsetTop - 500) {
+    secFeatures.classList.add("active");
+  }
+  if (window.scrollY >= secTestimonials.offsetTop - 500) {
+    secTestimonials.classList.add("active");
+  }
+  if (window.scrollY >= secTeammembers.offsetTop - 500) {
+    secTeammembers.classList.add("active");
   }
 };
 
